@@ -31,14 +31,7 @@ metadata:
   annotations:
     backstage.io/source-template: template:default/springboot-template
     backstage.io/linguist: 'https://github.com/backstage/backstage/tree/master/plugins/playlist'
-status:
-  items:
-    - type: backstage.io/catalog-processing
-      level: error
-      message: 'NotFoundError: File not found'
-      error:
-        name: NotFoundError
-        message: File not found
+
 spec:
   type: service
   lifecycle: experimental
@@ -47,3 +40,18 @@ spec:
   dependsOn: ['resource:artists-db']
   apiConsumedBy: ['component:www-artist']
 
+status:
+  items:
+    - type: backstage.io/catalog-processing
+      level: error
+      message: "InputError: Policy check failed for component:default/artist-lookup;
+        caused by Error: Malformed envelope, <root> must NOT have additional
+        properties"
+      error:
+        name: InputError
+        message: "Policy check failed for component:default/artist-lookup; caused by
+          Error: Malformed envelope, <root> must NOT have additional properties"
+        cause:
+          name: Error
+          message: Malformed envelope, <root> must NOT have additional properties
+          stack: >-
