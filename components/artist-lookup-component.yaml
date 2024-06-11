@@ -31,13 +31,6 @@ metadata:
   annotations:
     backstage.io/source-template: template:default/springboot-template
     backstage.io/linguist: 'https://github.com/backstage/backstage/tree/master/plugins/playlist'
-spec:
-  type: service
-  lifecycle: experimental
-  owner: team-a
-  system: artist-engagement-portal
-  dependsOn: ['resource:artists-db']
-  apiConsumedBy: ['component:www-artist']
 status:
   items:
     - type: backstage.io/catalog-processing
@@ -46,4 +39,11 @@ status:
       error:
         name: NotFoundError
         message: File not found
-        stack: ...
+spec:
+  type: service
+  lifecycle: experimental
+  owner: team-a
+  system: artist-engagement-portal
+  dependsOn: ['resource:artists-db']
+  apiConsumedBy: ['component:www-artist']
+
