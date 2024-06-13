@@ -1,6 +1,20 @@
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
+  name: 1ebe7b72-1f4e-45f1-9324-8ad4254ec97b
+  description: El equipo
+spec:
+  type: team
+  profile:
+    displayname: dev1
+    email: dev1@example.com
+    picture: https://api.dicebear.com/7.x/identicon/svg?seed=Fluffy&backgroundType=solid,gradientLinear&backgroundColor=ffd5dc,b6e3f4
+  parent: default
+  children: []
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
   name: team-a
   description: Team A
 spec:
